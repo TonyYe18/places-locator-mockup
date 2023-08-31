@@ -3,7 +3,7 @@ const address = ref("");
 const selectedKeyword = ref("restaurant");
 const places = ref<any>([]);
 
-const keywordList = ["restaurant", "cafe", "bar", "pub"];
+const keywordList = ["restaurant", "cafe", "bar", "pub", "apartment"];
 
 const requestStatus = ref("idle");
 
@@ -29,7 +29,7 @@ function search() {
         placesService.nearbySearch(
           {
             location: userLocation,
-            radius: 1000,
+            radius: 100000,
             keyword: selectedKeyword.value,
           },
           (placesResults: any, placesStatus: any) => {
