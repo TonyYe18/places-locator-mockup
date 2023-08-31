@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    preset: "heroku",
+  },
+
   devtools: { enabled: true },
 
   modules: ["@nuxtjs/tailwindcss"],
@@ -7,6 +11,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       googleApiKey: "",
-    }
-  }
-})
+    },
+  },
+});
